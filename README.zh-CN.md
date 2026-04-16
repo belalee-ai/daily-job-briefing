@@ -50,9 +50,46 @@
 
 ## 安装
 
+### 方式一：Skills CLI（推荐）
+
+```bash
+npx skills add belalee-ai/daily-job-briefing
+```
+
+### 方式二：Claude Code 插件市场
+
+```bash
+/plugin marketplace add belalee-ai/daily-job-briefing
+/plugin install daily-job-briefing
+```
+
+### 方式三：让 Agent 帮你装
+
+直接告诉 Claude Code：
+
+> 帮我安装 daily-job-briefing skill，地址是 https://github.com/belalee-ai/daily-job-briefing
+
+Claude 会自动完成克隆和配置。
+
+### 方式四：手动克隆
+
 ```bash
 git clone https://github.com/belalee-ai/daily-job-briefing.git ~/.claude/skills/daily-job-briefing
 ```
+
+### 验证安装
+
+安装后确认目录结构正确：
+
+```
+~/.claude/skills/daily-job-briefing/
+├── SKILL.md          ← 核心指令文件（必须存在）
+├── templates/        ← 日报和画像模板
+├── references/       ← 搜索信源配置
+└── shared/           ← 运行时数据（首次使用时自动创建）
+```
+
+无需 API Key，无需额外依赖。Skill 使用 Claude Code 自带的联网搜索能力即可工作。如需增强搜索，参见[可选增强](#可选增强)。
 
 ## 使用方式
 

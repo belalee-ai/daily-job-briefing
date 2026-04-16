@@ -50,9 +50,46 @@ Onboarding (once)          Briefing (daily)
 
 ## Installation
 
+### Method 1: Skills CLI (Recommended)
+
+```bash
+npx skills add belalee-ai/daily-job-briefing
+```
+
+### Method 2: Claude Code Plugin
+
+```bash
+/plugin marketplace add belalee-ai/daily-job-briefing
+/plugin install daily-job-briefing
+```
+
+### Method 3: Ask Your Agent
+
+Just tell Claude Code:
+
+> Install the daily-job-briefing skill from https://github.com/belalee-ai/daily-job-briefing
+
+Claude will handle cloning and setup automatically.
+
+### Method 4: Manual Clone
+
 ```bash
 git clone https://github.com/belalee-ai/daily-job-briefing.git ~/.claude/skills/daily-job-briefing
 ```
+
+### Verify Installation
+
+After installation, check that the skill is loaded:
+
+```
+~/.claude/skills/daily-job-briefing/
+├── SKILL.md          ← Core instruction file (must exist)
+├── templates/        ← Report & profile templates
+├── references/       ← Search source configs
+└── shared/           ← Runtime data (auto-created on first use)
+```
+
+No API keys or dependencies required. The skill works with Claude Code's built-in web search. For enhanced search capabilities, see [Optional Enhancements](#optional-enhancements).
 
 ## Usage
 
