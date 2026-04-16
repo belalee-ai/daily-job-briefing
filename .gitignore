@@ -1,0 +1,7 @@
+# 用户运行时数据（含个人信息，不应提交）
+shared/*
+!shared/.gitkeep
+
+# 日报输出文件和索引
+shared/reports/
+shared/report-index.md
